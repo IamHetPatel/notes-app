@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const API_URL = 'http://localhost:3000';
+    const API_URL = 'https://notes-app-m48y.onrender.com';
     let currentUser = null;
     let currentView = 'all';
 
