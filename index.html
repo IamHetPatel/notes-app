@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Notes App</h1>
+        <nav id="mainNav">
+            <button id="newNoteBtn">New Note</button>
+            <input type="text" id="searchInput" placeholder="Search notes">
+            <button id="labelViewBtn">Label View</button>
+            <button id="allNotesBtn">All Notes</button>
+            <button id="archivedNotesBtn">Archived</button>
+            <button id="trashNotesBtn">Trash</button>
+            <button id="reminderViewBtn">Reminders</button>
+            <button id="logoutBtn">Logout</button>
+        </nav>
+    </header>
+    
+    <main id="notesContainer"></main>
+    
+    <div id="authContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="registerUsername" placeholder="Username" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <textarea id="noteContent" placeholder="Note content"></textarea>
+            <input type="text" id="noteTags" placeholder="Add tags (comma-separated)">
+            <input type="color" id="noteColor" value="#ffffff">
+            <input type="datetime-local" id="noteReminder">
+            <button id="saveNoteBtn">Save Note</button>
+            <button id="closeModalBtn">Close</button>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
